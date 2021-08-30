@@ -12745,3 +12745,316 @@ Received Import Request.
 Start importing Assets/CharacterAnimation/Male_01_V01@Hurt.fbx using Guid(d3a99acc60f013c4399b31ce23f0f1f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cebc99848dfa1b5741609b87765c165') in 0.047044 seconds 
   Import took 0.051351 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 16885.894704 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Wood_Glazed_Tiling_Rotten.mat
+  artifactKey: Guid(2175d46b17bbdb04bae49219166ab822) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Wood_Glazed_Tiling_Rotten.mat using Guid(2175d46b17bbdb04bae49219166ab822) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aee39adeeb6c7490230bc8a491507f59') in 0.350773 seconds 
+  Import took 0.421903 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000568 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Sky_MediumCloudy.mat
+  artifactKey: Guid(c4221185c57274a4684e2f91cc28c031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Sky_MediumCloudy.mat using Guid(c4221185c57274a4684e2f91cc28c031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f642207d7a2a439aadb5a646f58567cb') in 0.048298 seconds 
+  Import took 0.054483 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000323 seconds.
+  path: Assets/ColorSkies/Skies/Sky_4.mat
+  artifactKey: Guid(21ae2c17e7f4a4447aea76bbeded97b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ColorSkies/Skies/Sky_4.mat using Guid(21ae2c17e7f4a4447aea76bbeded97b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19658dfe4324123f2eb6973361ae977b') in 0.364669 seconds 
+  Import took 0.368294 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_WoodLogs.mat
+  artifactKey: Guid(abf817be8f59d434cab1bd8c5b012dc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_WoodLogs.mat using Guid(abf817be8f59d434cab1bd8c5b012dc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd16ff8b90b72570c5776a228f3b52db2') in 0.079042 seconds 
+  Import took 0.084923 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000392 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Roof_Gold.mat
+  artifactKey: Guid(f5349cd0e784f534db5d2b0034b25209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Roof_Gold.mat using Guid(f5349cd0e784f534db5d2b0034b25209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41f97460af766ab4f173198b9e3cd84f') in 0.083078 seconds 
+  Import took 0.087661 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Stone_Rough.mat
+  artifactKey: Guid(054d25cf82c27e748bd9ab2468c1570a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Stone_Rough.mat using Guid(054d25cf82c27e748bd9ab2468c1570a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ed4cd4d4d7d75674cfe43d72e3e2d5a') in 0.181390 seconds 
+  Import took 0.186539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000647 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Porcelain_Tiling.mat
+  artifactKey: Guid(278ce7343dfad824fad5cb2ba902d0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Porcelain_Tiling.mat using Guid(278ce7343dfad824fad5cb2ba902d0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd6ac97620fefd663612e547bb12ab2b') in 0.023260 seconds 
+  Import took 0.027773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Stonestash.mat
+  artifactKey: Guid(b8c3a0ded5e636c4abafc021709bba5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Stonestash.mat using Guid(b8c3a0ded5e636c4abafc021709bba5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6cfc877805ca68a15b67fe0b3bec9fc') in 0.064555 seconds 
+  Import took 0.068483 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Rugs.mat
+  artifactKey: Guid(6bfb5149409481140b4130d856cba4db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Rugs.mat using Guid(6bfb5149409481140b4130d856cba4db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da82b5bf99001a3e0f4b0098b8ca495c') in 0.056787 seconds 
+  Import took 0.062431 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Candles.mat
+  artifactKey: Guid(3107dfe9bc27fdc4d9f79929d77c78d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Candles.mat using Guid(3107dfe9bc27fdc4d9f79929d77c78d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3122e5b8971e4a6c30e92d2f7cc0d494') in 0.031680 seconds 
+  Import took 0.035578 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000631 seconds.
+  path: Assets/ColorSkies/Skies/Sky_3.mat
+  artifactKey: Guid(a93d27d74f0fb574f9bbb6a2dbc86e97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ColorSkies/Skies/Sky_3.mat using Guid(a93d27d74f0fb574f9bbb6a2dbc86e97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3b31e9d5ed9e49cfde972ec9fc053c2') in 0.120365 seconds 
+  Import took 0.124417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Books.mat
+  artifactKey: Guid(e23324bdfb1e4004cb69afb26f0c3a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Books.mat using Guid(e23324bdfb1e4004cb69afb26f0c3a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80dc3de0c57ed95e57523cc6073a18c8') in 0.032643 seconds 
+  Import took 0.036945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Wood_Glazed_Tiling.mat
+  artifactKey: Guid(779d5b1e8b9889b4d8c6714f522240a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Wood_Glazed_Tiling.mat using Guid(779d5b1e8b9889b4d8c6714f522240a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07fe4d40594cb96e7137d3784b4605c8') in 0.052266 seconds 
+  Import took 0.059161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000662 seconds.
+  path: Assets/ColorSkies/Skies/Sky_1.mat
+  artifactKey: Guid(3bbeb79adedffcb4a94850fbf4b6cce0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ColorSkies/Skies/Sky_1.mat using Guid(3bbeb79adedffcb4a94850fbf4b6cce0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f48b888f73c40b38662ad599590eb070') in 0.159332 seconds 
+  Import took 0.164761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/ColorSkies/Skies/Sky_2.mat
+  artifactKey: Guid(3a8c5fa081c5a974b9fffa93e4230ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ColorSkies/Skies/Sky_2.mat using Guid(3a8c5fa081c5a974b9fffa93e4230ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61fe0999d8288e981d04a7483752f6fe') in 0.110700 seconds 
+  Import took 0.114195 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Roof_Clay.mat
+  artifactKey: Guid(149a5b7f031da154fb3c918f4dcca021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Roof_Clay.mat using Guid(149a5b7f031da154fb3c918f4dcca021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80921115ffb770a70da68e0490a769e6') in 0.074594 seconds 
+  Import took 0.080156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Tarp.mat
+  artifactKey: Guid(118876d7465fce940b737d3e951139e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Tarp.mat using Guid(118876d7465fce940b737d3e951139e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3651d2445cdccbf72483ad5103a2640e') in 0.134607 seconds 
+  Import took 0.137286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/ColorSkies/Skies/Sky_7.mat
+  artifactKey: Guid(1d3f5254e25764546b2211aa1dd32efe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ColorSkies/Skies/Sky_7.mat using Guid(1d3f5254e25764546b2211aa1dd32efe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c5412a5b0d421417b0fd0cb56d483e6') in 0.112600 seconds 
+  Import took 0.115665 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_KitchenProps.mat
+  artifactKey: Guid(febb6c043b39b494285b36e273d72a6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_KitchenProps.mat using Guid(febb6c043b39b494285b36e273d72a6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82dff433e0f29f652990a48fc7ca121d') in 0.046702 seconds 
+  Import took 0.050968 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Plugins/Wolf3D/RPM Avatar Pack/Materials/Teeth.mat
+  artifactKey: Guid(46854f9218c656d4893058b6d8248e7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Wolf3D/RPM Avatar Pack/Materials/Teeth.mat using Guid(46854f9218c656d4893058b6d8248e7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65b072b2485a8bed240075175a5d587c') in 0.035838 seconds 
+  Import took 0.041080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Temple_Trims.mat
+  artifactKey: Guid(e4b6a25680c015747aca3381170344c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Temple_Trims.mat using Guid(e4b6a25680c015747aca3381170344c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85b17f5883a8ba1a8097aaf77c8f667f') in 0.110536 seconds 
+  Import took 0.114641 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Rocks.mat
+  artifactKey: Guid(1fc91aa65bd9ec841901c6da8db1a5b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Rocks.mat using Guid(1fc91aa65bd9ec841901c6da8db1a5b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88b2f0f71f840a67312d5c264a5c16ca') in 0.073221 seconds 
+  Import took 0.079686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000445 seconds.
+  path: Assets/ColorSkies/Skies/Sky_6.mat
+  artifactKey: Guid(59998d46d34ccf340be71d5a79eec445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ColorSkies/Skies/Sky_6.mat using Guid(59998d46d34ccf340be71d5a79eec445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a9b57ade7d20e78875a8971f8433271') in 0.092066 seconds 
+  Import took 0.095512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/ColorSkies/Skies/Sky_8.mat
+  artifactKey: Guid(4323fde32dbcebf4195ad58c05f28e84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ColorSkies/Skies/Sky_8.mat using Guid(4323fde32dbcebf4195ad58c05f28e84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59dbbcf208a6713aad2575172a71eaf2') in 0.105299 seconds 
+  Import took 0.108507 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Wood_Glazed_Trim.mat
+  artifactKey: Guid(0489362df09ab874794ecfab0cc96d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Wood_Glazed_Trim.mat using Guid(0489362df09ab874794ecfab0cc96d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac28dbe056729c8315b0444f3214d855') in 0.038327 seconds 
+  Import took 0.042175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/PropStones.mat
+  artifactKey: Guid(f8f8641332a247b40bb6a32db23d5d43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/PropStones.mat using Guid(f8f8641332a247b40bb6a32db23d5d43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b1c7fc2e236d6676074ad2576d3f9ba') in 0.048136 seconds 
+  Import took 0.053520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Fabric.mat
+  artifactKey: Guid(90007ce0277f74f4c9e0f795ddb1ae91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Fabric.mat using Guid(90007ce0277f74f4c9e0f795ddb1ae91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5431d54c576f04cd18820d54ac0c95b9') in 0.057819 seconds 
+  Import took 0.064543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000451 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Roof_Metal.mat
+  artifactKey: Guid(981a41c46e616f04c85007a151253a15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Roof_Metal.mat using Guid(981a41c46e616f04c85007a151253a15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e8f21b49e2c2a395a1d55bb1528fc32') in 0.076247 seconds 
+  Import took 0.080344 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Wood_Glazed_Trim_Rotten.mat
+  artifactKey: Guid(2623b4b5612f01146b7947beb70f4658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Wood_Glazed_Trim_Rotten.mat using Guid(2623b4b5612f01146b7947beb70f4658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1a6293f89840acf20deffe206e4a700') in 0.036677 seconds 
+  Import took 0.042043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Rocks_Large.mat
+  artifactKey: Guid(56d008855069e7349afc2ae75d1deb75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Content/Meshes/Main/Materials/Prop_Rocks_Large.mat using Guid(56d008855069e7349afc2ae75d1deb75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a33190749f6daf49c9cb0995b2bdb730') in 0.062631 seconds 
+  Import took 0.067189 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/ColorSkies/Skies/Sky_5.mat
+  artifactKey: Guid(d9a12ffaaa5dd67418211def4dfaee9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ColorSkies/Skies/Sky_5.mat using Guid(d9a12ffaaa5dd67418211def4dfaee9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c538ba4df579105bfc9d15e6ca1c7351') in 0.106199 seconds 
+  Import took 0.110597 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1175.216044 seconds.
+  path: Assets/Sun_Temple/Prefabs/Natural/Rock_Facing_B.prefab
+  artifactKey: Guid(e8cce52ba9f565b4c80206ce9c825247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Prefabs/Natural/Rock_Facing_B.prefab using Guid(e8cce52ba9f565b4c80206ce9c825247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a71f273a619a845b5f61db5496a4decf') in 0.045590 seconds 
+  Import took 0.049344 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Sun_Temple/Prefabs/Natural/Rock_Facing_C.prefab
+  artifactKey: Guid(f79988866f189cd48b10e3f132af699e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Prefabs/Natural/Rock_Facing_C.prefab using Guid(f79988866f189cd48b10e3f132af699e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaa4cab780b48fb01ad47a1c52c69015') in 0.059881 seconds 
+  Import took 0.063370 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Sun_Temple/Prefabs/Natural/Rock_Facing_D.prefab
+  artifactKey: Guid(42d517adf3a964e43a5562963674a10c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Prefabs/Natural/Rock_Facing_D.prefab using Guid(42d517adf3a964e43a5562963674a10c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0adaf3d914b3d018c34a2429dd93f888') in 0.063917 seconds 
+  Import took 0.067907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Sun_Temple/Prefabs/Natural/Rock_Short.prefab
+  artifactKey: Guid(bc8766ba752f53344b82328d07c77888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Prefabs/Natural/Rock_Short.prefab using Guid(bc8766ba752f53344b82328d07c77888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7508189c0516588ffe5459a493b042e2') in 0.046204 seconds 
+  Import took 0.049897 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/Sun_Temple/Prefabs/Natural/Rock_Long.prefab
+  artifactKey: Guid(f4446ed5efdd3094eb3baaec9320b5d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Prefabs/Natural/Rock_Long.prefab using Guid(f4446ed5efdd3094eb3baaec9320b5d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f9ac47aaa9f1e2cbf0e7d47fbf4cec8') in 0.050349 seconds 
+  Import took 0.056100 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/Sun_Temple/Prefabs/Natural/Rock_Facing_E.prefab
+  artifactKey: Guid(663cd5104e3aabd4da3ecd606d76103f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Prefabs/Natural/Rock_Facing_E.prefab using Guid(663cd5104e3aabd4da3ecd606d76103f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '085cde2af70ca612ba6f548088d9fe36') in 0.059911 seconds 
+  Import took 0.065909 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2253.129242 seconds.
+  path: Assets/NewLayer.terrainlayer
+  artifactKey: Guid(7bb3aea82c9cc5e46bdd0249a48524c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NewLayer.terrainlayer using Guid(7bb3aea82c9cc5e46bdd0249a48524c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7f589f32046cf18bd318a2fb3233f75') in 0.063291 seconds 
+  Import took 0.073493 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 939.843204 seconds.
+  path: Assets/Sun_Temple/Prefabs/Buildings_Prefabbed/NewLayer.terrainlayer
+  artifactKey: Guid(0bdd3b056be5f7b46a670f394c86b2d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sun_Temple/Prefabs/Buildings_Prefabbed/NewLayer.terrainlayer using Guid(0bdd3b056be5f7b46a670f394c86b2d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e14dd1179ead6875dc8f9675be550f5c') in 0.020726 seconds 
+  Import took 0.025674 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
