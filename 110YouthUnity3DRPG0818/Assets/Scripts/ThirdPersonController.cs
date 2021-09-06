@@ -9,9 +9,9 @@ using UnityEngine.Video;
 
 // 修飾詞 類別 類別名稱 : 繼承類別
 // 欄位 Field, 屬性 Property, 方法 Method, 事件 Event
-public class ThirdPersonController : MonoBehaviour  
+public class ThirdPersonController : MonoBehaviour
 {
-    #region Field(欄位)
+    #region Field (欄位)
     // 儲存遊戲資料，例如：移動速度、跳躍高度
     // 常用資料類型：int (整數), float (浮點數), string (字串), bool (布林值)
     // 語法：修飾詞 資料類型 欄位名稱 (指定 預設值) 結尾
@@ -40,10 +40,10 @@ public class ThirdPersonController : MonoBehaviour
     public AudioClip SoundFall;
 
     [Header("動畫參數")]
-    public string AnimatorWalk = "WalkingSwitch";
-    public string AnimatorRun = "RinningSwitch";
-    public string AnimatorInjury = "InjuryTrigger";
-    public string AnimatorDeath = "DeathTrigger";
+    public string animatorParWalk = "WalkingSwitch";
+    public string animatorParRun = "RinningSwitch";
+    public string animatorParInjury = "InjuryTrigger";
+    public string animatorParDeath = "DeathTrigger";
 
     private AudioSource Aud;
     private Rigidbody Rig;
@@ -86,15 +86,208 @@ public class ThirdPersonController : MonoBehaviour
     #endregion
     #endregion
 
-    #region Property(屬性)
+    #region Property (屬性)
+    #region 屬性練習
+    /*
+    // 儲存資料，與欄位相同
+    // 差異：屬性可以設定存取權限 - Get, Set
+    // 語法：修飾詞 資料類型 屬性名稱 { 取; 存; }
+    public int ReadAndWrite { get; set; }
+    // 唯讀屬性：只能 Get (取得)
+    public int Read { get; }
+    // 唯讀屬性：透過 Get 設定預設值，關鍵字 Return 為傳回值
+    public int ReadValue
+    {
+        get
+        {
+            return 77;
+        }
+    }
+
+    // 唯寫屬性：禁止，必須有 Get
+    // public int write { set: }
+
+    private int _HP;
+    public int HP
+    {
+        get
+        {
+            return _HP;
+        }
+        set
+        {
+            _HP = value;
+        }
+    }
+    */
+    #endregion
+
+    public KeyCode keyJump { get; }
+    #endregion
+
+
+
+    #region Method (方法)
+    // 定義與實作較複雜程式的區塊，功能
+    // 語法：修飾詞 傳回資料類型 方法名稱 (參數1, ... , 參數N) { 程式區塊 }
+    // 常用傳回類型：void (無傳回)
+
+    private void MoveSpeed(float MovementSpeed)
+    {
+        print("MovementSpeed" + MovementSpeed);
+    }
+    private float MovementInput()
+    {
+        return 0f;
+    }
+    private bool CheckGround()
+    {
+        return false;
+    }
+    private void Jump()
+    {
+
+    }
+    private void AnimationUpdate()
+    {
+
+    }
+
+    #region 練習
+    /*
+    private void Test()
+    {
+        print("Method Test");
+    }
+
+    private int ReturnJump()
+    {
+        return 999;
+    }
+
+    // 參數語法：資料類型 參數名稱 指定 預設值
+    // 有預設值的參數可以不輸入引數，選填式參數
+    private void Skill(int damage, string effect = "Ash", string sound = "gah")
+    {
+        print("參數版本 - 傷害值：" + damage);
+        print("參數版本 - 技能特效" + effect);
+        print("參數版本 - 音效" + sound);
+    }
+    */
+    // 低效率作法
+    /*
+    private void Skill100()
+    {
+        print("傷害值：" + 100);
+        print("技能特效");
+    }
+    private void Skill150()
+    {
+        print("傷害值：" + 150);
+        print("技能特效");
+    }
+    private void Skill200()
+    {
+        print("傷害值：" + 200);
+        print("技能特效");
+    }
+    */
+    #endregion
+
+    #region BMI練習
+    /*
+    // BMI
+    /// <summary>
+    /// 計算 BMI 方法
+    /// </summary>
+    /// <param name="weight"></param>
+    /// <param name="height"></param>
+    /// <param name="name"></param>
+    /// <returns>BMI 結果</returns>
+    private float BMI(float weight, float height, string name = "human")
+    {
+        print(name + "'s BMI");
+        return weight / (height * height);
+    }
+    */
+    #endregion
 
     #endregion
 
-    #region Method(方法)
-
-    #endregion
-
-    #region Event(事件)
+    #region Event (事件)
     // 特定時間點會執行的方法，程式的入口 Start，等於 Console Main
+    // 開始事件：遊戲開始時執行一次
+    // 處理初始化、抓取資料
+    private void Start()
+    {
+        #region 輸出方法
+        /*
+        print("Hello MDFK!");
+
+        Debug.Log("一般訊息");
+        Debug.LogWarning("警告訊息");
+        Debug.LogError("錯誤訊息");
+        */
+        #endregion
+
+        #region 屬性練習
+        /*
+        // 欄位與屬性 Get (取得) 與 Set (設定)
+        print("欄位資料 - 移動速度：" + MovementSpeed);
+        print("屬性資料 - 讀寫屬性：" + ReadAndWrite);
+        MovementSpeed = 20.5f;
+        ReadAndWrite = 90;
+        print("修改後的資料");
+        print("欄位資料 - 移動速度：" + MovementSpeed);
+        print("屬性資料 - 讀寫屬性：" + ReadAndWrite);
+        // 唯讀屬性
+        // Read = 7;  // 唯讀屬性不能Set (設定)
+        print("唯讀屬性：" + Read);
+        print("唯讀屬性，有預設值：" + ReadValue);
+
+        // 屬性存取練習
+        print("HP: " + HP);
+        HP = 100;
+        print("HP: " + HP);
+        */
+        #endregion
+
+        #region 低效率作法
+        /*
+        Skill100();
+        Skill150();
+        Skill200();
+        */
+        #endregion
+
+        // BMI 練習
+        // print(BMI(60, 1.66f, "Coffee"));
+
+        #region 練習
+        /*
+        // 呼叫有參數方法時，必須輸入對應的引數
+        Skill(300);  // 使用選填式參數
+        Skill(999, "Explosion");  // 自訂參數
+        Skill(500, sound: "shu");  // 有複數選填式參數時可使用指名參數語法：參數名稱: 值
+        
+
+        // 呼叫自訂方法語法：方法名稱();
+        Test();
+        // 呼叫有傳回值的 Method
+        //  1. 區域變數指定傳回值 - 區域變數僅能在此結構內存取
+        int j = ReturnJump();
+        print("跳躍值：" + j);
+        //  2. 將傳回方法當成值使用
+        print("跳躍值 (值)：" + (ReturnJump() + 1));
+        */
+        #endregion
+    }
+
+    // 更新事件：每秒約執行 60 次 (60 FPS)
+    // 處理持續性運動、移動物件、監聽玩家輸入按鍵
+    private void Update()
+    {
+
+    }
     #endregion
 }
