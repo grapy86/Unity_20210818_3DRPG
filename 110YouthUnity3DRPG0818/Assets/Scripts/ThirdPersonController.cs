@@ -23,10 +23,35 @@ public class ThirdPersonController : MonoBehaviour
     //  語法：[屬性名稱(屬性值)]
     //  Header (標題), Tooltip (提示), Range (數值範圍)
     // ※ Unity運作時屬性面板之設定值優先度高於程式碼
-    [Header("移動速度"), Tooltip("輸入數值調整角色移動速度"), Range(1, 500)]
-    public float speed = 10.5f;
+
+    [Header("移動速度"), Range(0, 500)]
+    public float MovementSpeed = 10.5f;
+    [Header("跳躍高度"), Range(0, 1000)]
+    public float JumpHeight = 100;
+    [Header("檢測地面資料")]
+    [Tooltip("檢查角色是否在地面上")]
+    public bool isGrounded = false;
+    public Vector3 CheckGroundOffset;
+    [Range(0, 3)]
+    public float CheckGroundRadius = 0.2f;
+
+    [Header("音效")]
+    public AudioClip SoundJump;
+    public AudioClip SoundFall;
+
+    [Header("動畫參數")]
+    public string AnimatorWalk = "WalkingSwitch";
+    public string AnimatorRun = "RinningSwitch";
+    public string AnimatorInjury = "InjuryTrigger";
+    public string AnimatorDeath = "DeathTrigger";
+
+    private AudioSource Aud;
+    private Rigidbody Rig;
+    private Animator AniCtrl;
+
 
     #region Unity 資料類型
+    /*
     // Color (顏色)
     public Color color;  // 預設值
     public Color red = Color.red;  // 內建顏色
@@ -49,6 +74,15 @@ public class ThirdPersonController : MonoBehaviour
     public Sprite sprite;  //圖片：支援 png, jpeg, 不支援 gif
     public Texture2D texture2D;  // 2D 圖片：支援 png, jpeg
     public Material material;  // 材質球
+
+    [Header("元件")]
+    // Component (元件) 在Inspector (屬性面板) 上可折疊
+    public Transform tra;
+    public Animation aniOld;
+    public Animator aniNew;
+    public Light lig;
+    public Camera cam;
+    */
     #endregion
     #endregion
 
@@ -61,6 +95,6 @@ public class ThirdPersonController : MonoBehaviour
     #endregion
 
     #region Event(事件)
-
+    // 特定時間點會執行的方法，程式的入口 Start，等於 Console Main
     #endregion
 }
