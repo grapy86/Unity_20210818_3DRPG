@@ -23,7 +23,6 @@ public class ThirdPersonController : MonoBehaviour
     //  語法：[屬性名稱(屬性值)]
     //  Header (標題), Tooltip (提示), Range (數值範圍)
     // ※ Unity運作時屬性面板之設定值優先度高於程式碼
-
     [Header("移動速度"), Range(0, 500)]
     public float MovementSpeed = 10.5f;
     [Header("跳躍高度"), Range(0, 1000)]
@@ -34,20 +33,18 @@ public class ThirdPersonController : MonoBehaviour
     public Vector3 CheckGroundOffset;
     [Range(0, 3)]
     public float CheckGroundRadius = 0.2f;
-
     [Header("音效")]
     public AudioClip SoundJump;
     public AudioClip SoundFall;
-
     [Header("動畫參數")]
     public string animatorParWalk = "WalkingSwitch";
     public string animatorParRun = "RinningSwitch";
     public string animatorParInjury = "InjuryTrigger";
     public string animatorParDeath = "DeathTrigger";
 
-    private AudioSource Aud;
-    private Rigidbody Rig;
-    private Animator AniCtrl;
+    private AudioSource aud;
+    private Rigidbody rig;
+    private Animator aniCtrl;
 
 
     #region Unity 資料類型
@@ -124,8 +121,6 @@ public class ThirdPersonController : MonoBehaviour
 
     public KeyCode keyJump { get; }
     #endregion
-
-
 
     #region Method (方法)
     // 定義與實作較複雜程式的區塊，功能
@@ -214,6 +209,8 @@ public class ThirdPersonController : MonoBehaviour
 
     #endregion
 
+    public GameObject playerObject;
+
     #region Event (事件)
     // 特定時間點會執行的方法，程式的入口 Start，等於 Console Main
     // 開始事件：遊戲開始時執行一次
@@ -281,6 +278,14 @@ public class ThirdPersonController : MonoBehaviour
         print("跳躍值 (值)：" + (ReturnJump() + 1));
         */
         #endregion
+
+        // 方式1. 物件欄位名稱.取得元件(類型(元件類型)) 當作 元件類型;
+        aud = playerObject.GetComponent(typeof(AudioSource)) as AudioSource;
+        // 方式2. 此腳本遊戲物件.取得元件<泛型>();
+        // gameObject用來指代當前腳本所掛載的遊戲物件本身
+        rig = gameObject.GetComponent<Rigidbody>();
+        // 方式3. 取得元件<泛型>();
+        aniCtrl = GetComponent<Animator>();
     }
 
     // 更新事件：每秒約執行 60 次 (60 FPS)
