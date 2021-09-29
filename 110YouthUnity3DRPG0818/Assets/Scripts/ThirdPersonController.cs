@@ -24,23 +24,26 @@ public class ThirdPersonController : MonoBehaviour
     //  Header (標題), Tooltip (提示), Range (數值範圍)
     // ※ Unity運作時屬性面板之設定值優先度高於程式碼
     [Header("移動速度"), Range(0, 500)]
-    public float MovementSpeed = 10.5f;
+    public float speed = 10.5f;
     [Header("跳躍高度"), Range(0, 1000)]
-    public float JumpHeight = 100;
+    public float jumpHeight = 100;
     [Header("檢測地面資料")]
     [Tooltip("檢查角色是否在地面上")]
     public bool isGrounded = false;
-    public Vector3 CheckGroundOffset;
+    public Vector3 checkGroundOffset;
     [Range(0, 3)]
-    public float CheckGroundRadius = 0.2f;
+    public float checkGroundRadius = 0.2f;
     [Header("音效")]
-    public AudioClip SoundJump;
-    public AudioClip SoundFall;
+    public AudioClip audioJump;
+    public AudioClip audioFall;
     [Header("動畫參數")]
     public string animatorParWalk = "WalkingSwitch";
     public string animatorParRun = "RinningSwitch";
     public string animatorParInjury = "InjuryTrigger";
     public string animatorParDeath = "DeathTrigger";
+
+    [Header("玩家角色物件")]
+    public GameObject playerObject;
 
     private AudioSource aud;
     private Rigidbody rig;
@@ -127,23 +130,33 @@ public class ThirdPersonController : MonoBehaviour
     // 語法：修飾詞 傳回資料類型 方法名稱 (參數1, ... , 參數N) { 程式區塊 }
     // 常用傳回類型：void (無傳回)
 
-    private void MoveSpeed(float MovementSpeed)
+    private void Move(float speedMove)
     {
-        print("MovementSpeed" + MovementSpeed);
+        rig.velocity = 
+            Vector3.forward * MoveInput("Vertical") * speedMove + 
+            Vector3.right * MoveInput("Horizontal") * speedMove + 
+            Vector3.up * rig.velocity.y;
     }
-    private float MovementInput()
+    private float MoveInput(string axisName)
     {
-        return 0f;
+        return Input.GetAxis(axisName);
     }
     private bool CheckGround()
     {
-        return false;
+        Collider[] hits = Physics.OverlapSphere(
+            transform.position +
+            transform.right * checkGroundOffset.x +
+            transform.up * checkGroundOffset.y +
+            transform.forward * checkGroundOffset.z,
+            checkGroundRadius, 1 << 3);
+
+        return hits.Length > 0;
     }
     private void Jump()
     {
 
     }
-    private void AnimationUpdate()
+    private void UpdateAnimation()
     {
 
     }
@@ -207,9 +220,7 @@ public class ThirdPersonController : MonoBehaviour
     */
     #endregion
 
-    #endregion
-
-    public GameObject playerObject;
+    #endregion    
 
     #region Event (事件)
     // 特定時間點會執行的方法，程式的入口 Start，等於 Console Main
@@ -257,8 +268,9 @@ public class ThirdPersonController : MonoBehaviour
         */
         #endregion
 
-        // BMI 練習
-        // print(BMI(60, 1.66f, "Coffee"));
+        /* BMI 練習
+        print(BMI(60, 1.66f, "Coffee"));
+        */
 
         #region 練習
         /*
@@ -292,7 +304,26 @@ public class ThirdPersonController : MonoBehaviour
     // 處理持續性運動、移動物件、監聽玩家輸入按鍵
     private void Update()
     {
+        CheckGround();
+        Jump();
+    }
 
+    private void FixedUpdate()
+    {
+        Move(speed);
+    }
+
+    // 繪製圖示事件：在Unity Editor內繪製圖示輔助開發，發布後會自動隱藏
+    private void OnDrawGizmos()
+    {
+        // 1. 指定顏色；2. 繪製圖形
+        Gizmos.color = new Color(1, 0, 0.2f, 0.3f);
+        Gizmos.DrawSphere(
+            transform.position + 
+            transform.right * checkGroundOffset.x + 
+            transform.up * checkGroundOffset.y + 
+            transform.forward * checkGroundOffset.z, 
+            checkGroundRadius);
     }
     #endregion
 }
