@@ -26,7 +26,7 @@ public class ThirdPersonController : MonoBehaviour
     [Header("移動速度"), Range(0, 500)]
     public float speed = 10.5f;
     [Header("跳躍高度"), Range(0, 1000)]
-    public float jumpHeight = 100;
+    public float jump = 100;
     [Header("檢測地面資料")]
     [Tooltip("檢查角色是否在地面上")]
     public bool isGrounded = false;
@@ -41,6 +41,8 @@ public class ThirdPersonController : MonoBehaviour
     public string animatorParRun = "RinningSwitch";
     public string animatorParInjury = "InjuryTrigger";
     public string animatorParDeath = "DeathTrigger";
+    public string animatorParJump = "JumpTrigger";
+    public string animatorParIsGrounded = "IsGrounded";
 
     [Header("玩家角色物件")]
     public GameObject playerObject;
@@ -122,7 +124,8 @@ public class ThirdPersonController : MonoBehaviour
     */
     #endregion
 
-    public KeyCode keyJump { get; }
+    // C# 7.0 存取子 可以使用 Lambda => 運算子
+    private bool keyJump { get => Input.GetKeyDown(KeyCode.Space); }
     #endregion
 
     #region Method (方法)
@@ -149,16 +152,18 @@ public class ThirdPersonController : MonoBehaviour
             transform.up * checkGroundOffset.y +
             transform.forward * checkGroundOffset.z,
             checkGroundRadius, 1 << 3);
-
+        isGrounded = hits.Length > 0;
         return hits.Length > 0;
     }
     private void Jump()
     {
-
+        if (CheckGround() && keyJump) { rig.AddForce(transform.up * jump); }
     }
     private void UpdateAnimation()
-    {
-
+    {        
+        aniCtrl.SetBool(animatorParWalk, MoveInput("Vertical") != 0 || MoveInput("Horizontal") != 0);
+        aniCtrl.SetBool(animatorParIsGrounded, isGrounded);
+        if (keyJump) aniCtrl.SetTrigger(animatorParJump);
     }
 
     #region 練習
@@ -304,8 +309,8 @@ public class ThirdPersonController : MonoBehaviour
     // 處理持續性運動、移動物件、監聽玩家輸入按鍵
     private void Update()
     {
-        CheckGround();
         Jump();
+        UpdateAnimation();
     }
 
     private void FixedUpdate()
