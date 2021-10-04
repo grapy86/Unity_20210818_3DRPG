@@ -1,17 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace coffee
 {
-    /// <summary>
-    /// Coffee 20210906
-    /// 第三人稱控制器
-    /// 移動、跳躍
-    /// </summary>
-
-    // 修飾詞 類別 類別名稱 : 繼承類別
-    // 欄位 Field, 屬性 Property, 方法 Method, 事件 Event
     public class ThirdPersonController : MonoBehaviour
     {
         #region Field (欄位)
@@ -42,6 +32,7 @@ namespace coffee
         private AudioSource aud;
         private Rigidbody rig;
         private Animator aniCtrl;
+        private ThirdPersonCamera thirdPersonCamera;
         #endregion
 
         #region Property (屬性)
@@ -53,8 +44,8 @@ namespace coffee
         private void Move(float speedMove)
         {
             rig.velocity =
-                Vector3.forward * MoveInput("Vertical") * speedMove +
-                Vector3.right * MoveInput("Horizontal") * speedMove +
+                transform.forward * MoveInput("Vertical") * speedMove +
+                transform.right * MoveInput("Horizontal") * speedMove +
                 Vector3.up * rig.velocity.y;
         }
         private float MoveInput(string axisName)
@@ -87,6 +78,17 @@ namespace coffee
             aniCtrl.SetBool(animatorParIsGrounded, isGrounded);
             if (keyJump) aniCtrl.SetTrigger(animatorParJump);
         }
+        [Header("面向速度"), Range(0, 50)]
+        public float speedLookAt = 3;
+        private void LookAtForward()
+        {
+            if (MoveInput("Vertical") > 0.1f)
+            {
+                Quaternion angle = Quaternion.LookRotation(thirdPersonCamera.posForward - transform.position);
+                transform.rotation = Quaternion.Lerp(transform.rotation, angle, Time.deltaTime * speedLookAt);
+            }
+            
+        }
         #endregion
 
         #region Event (事件)
@@ -95,11 +97,14 @@ namespace coffee
             aud = playerObject.GetComponent(typeof(AudioSource)) as AudioSource;
             rig = gameObject.GetComponent<Rigidbody>();
             aniCtrl = GetComponent<Animator>();
+
+            thirdPersonCamera = FindObjectOfType<ThirdPersonCamera>();
         }
         private void Update()
         {
             Jump();
             UpdateAnimation();
+            LookAtForward();
         }
 
         private void FixedUpdate()
