@@ -4,7 +4,12 @@ namespace coffee
 {
     public class ThirdPersonController : MonoBehaviour
     {
-        #region Field (欄位)
+        /// <summary>
+        /// 2021.1004
+        /// 第三人稱控制器
+        /// 移動與跳躍
+        /// </summary>
+        #region Field
         [Header("移動速度"), Range(0, 500)]
         public float speed = 10.5f;
         [Header("跳躍高度"), Range(0, 1000)]
@@ -19,12 +24,12 @@ namespace coffee
         public AudioClip soundJump;
         public AudioClip soundGround;
         [Header("動畫參數")]
-        public string animatorParWalk = "WalkingSwitch";
-        public string animatorParRun = "RinningSwitch";
-        public string animatorParInjury = "InjuryTrigger";
-        public string animatorParDeath = "DeathTrigger";
-        public string animatorParJump = "JumpTrigger";
-        public string animatorParIsGrounded = "IsGrounded";
+        public string animatorParWalk = "走路開關";
+        public string animatorParRun = "跑步開關";
+        public string animatorParInjury = "受傷觸發";
+        public string animatorParDeath = "死亡觸發";
+        public string animatorParJump = "跳躍觸發";
+        public string animatorParIsGrounded = "地板偵測";
 
         [Header("玩家角色物件")]
         public GameObject playerObject;
@@ -35,12 +40,12 @@ namespace coffee
         private ThirdPersonCamera thirdPersonCamera;
         #endregion
 
-        #region Property (屬性)
+        #region Property
         private bool keyJump { get => Input.GetKeyDown(KeyCode.Space); }
         private float volumeRandom { get => Random.Range(0.7f, 1.5f); }
         #endregion
 
-        #region Method (方法)
+        #region Method
         private void Move(float speedMove)
         {
             rig.velocity =
@@ -91,7 +96,7 @@ namespace coffee
         }
         #endregion
 
-        #region Event (事件)
+        #region Event
         private void Start()
         {
             aud = playerObject.GetComponent(typeof(AudioSource)) as AudioSource;
@@ -123,5 +128,4 @@ namespace coffee
         }
         #endregion
     }
-
 }
