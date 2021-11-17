@@ -20247,9 +20247,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.5
   attack: 35
-  rangeAttack: 5
+  rangeAttack: 3.5
   rangeTrack: 15
   v2RandomWait: {x: 1, y: 5}
+  v2RandomWalk: {x: 3, y: 7}
   state: 0
 --- !u!195 &1994164834
 NavMeshAgent:
