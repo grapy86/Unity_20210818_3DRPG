@@ -10,6 +10,8 @@ namespace coffee.Dialogue
     [CreateAssetMenu(menuName = "coffee/Data Dialogue", fileName = "NPC Data Dialogue")]
     public class DataDialogue : ScriptableObject
     {
+        [Header("對話者名稱")]
+        public string nameDialogue;
         [Header("任務前對話內容"), TextArea(2, 7)]
         public string[] beforeMission;
         [Header("任務進行中對話內容"), TextArea(2, 7)]

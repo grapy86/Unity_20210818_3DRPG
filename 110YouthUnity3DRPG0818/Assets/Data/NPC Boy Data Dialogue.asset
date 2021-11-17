@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d727e26170a0648b0a709e9d4cf7f3, type: 3}
   m_Name: NPC Boy Data Dialogue
   m_EditorClassIdentifier: 
+  nameDialogue: "\u5C41\u5B69"
   beforeMission:
-  - Never gonna give you up
-  - never gonna let you down
+  - Never gonna give you up.
+  - Never gonna let you down.
   missionning:
-  - Never gonna run around and desert you
-  - Never gonna make you cry
+  - Never gonna run around and desert you.
+  - Never gonna make you cry.
   afterMission:
-  - never gonna say goodbye
-  - Never gonna tell a lie and hurt you
+  - Never gonna say goodbye.
+  - Never gonna tell a lie and hurt you.
   countNeed: 10
   stateNPCMission: 0

@@ -67,6 +67,7 @@ namespace coffee.Dialogue
             {
                 dialogueSystem.Dialogue(dataDialogue);
             }
+            else if (!CheckPlayer()) dialogueSystem.StopDialogue();
         }
     }
 }
