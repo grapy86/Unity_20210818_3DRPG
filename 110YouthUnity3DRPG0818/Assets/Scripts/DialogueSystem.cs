@@ -65,13 +65,15 @@ namespace coffee.Dialogue
             textName.text = "";
             textName.text = data.nameDialogue;
 
-            for (int j = 0; j < data.beforeMission.Length; j++)
+            string[] dialogueContents = data.beforeMission;
+
+            for (int j = 0; j < dialogueContents.Length; j++)
             {
                 textContent.text = "";
 
-                for (int i = 0; i < data.beforeMission[j].Length; i++)
+                for (int i = 0; i < dialogueContents[j].Length; i++)
                 {
-                    textContent.text += data.beforeMission[j][i];
+                    textContent.text += dialogueContents[j][i];
                     yield return new WaitForSeconds(dialogueInterval);
                 }
 

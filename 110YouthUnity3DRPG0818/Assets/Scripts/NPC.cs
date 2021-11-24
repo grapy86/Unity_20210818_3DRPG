@@ -23,20 +23,22 @@ namespace coffee.Dialogue
 
         private Transform target;
         private bool startDialogueKey { get => Input.GetKeyDown(KeyCode.E); }
+        private int countCurrent;
         #endregion
         
-
         private void OnDrawGizmos()
         {
             Gizmos.color = new Color(0, 1, 0.2f, 0.3f);
             Gizmos.DrawSphere(transform.position, checkPlayerRadius);
         }
+
         private void Update()
         {
             goTip.SetActive(CheckPlayer());
             LookAtPlayer();
             StartDialogue();
         }
+
         /// <summary>
         /// 檢查玩家是否進入指定範圍
         /// </summary>
@@ -47,6 +49,7 @@ namespace coffee.Dialogue
             if (hits.Length > 0) target = hits[0].transform;
             return hits.Length > 0;
         }
+
         /// <summary>
         /// 面朝玩家轉向
         /// </summary>
@@ -58,6 +61,7 @@ namespace coffee.Dialogue
                 transform.rotation = Quaternion.Lerp(transform.rotation, angle, Time.deltaTime * speedLookAt);
             }
         }
+
         /// <summary>
         /// 玩家進入範圍內並且按下指定指令，傳送對話系統執行請求
         /// </summary>
@@ -68,6 +72,17 @@ namespace coffee.Dialogue
                 dialogueSystem.Dialogue(dataDialogue);
             }
             else if (!CheckPlayer()) dialogueSystem.StopDialogue();
+        }
+
+        /// <summary>
+        /// 更新任務需求數量
+        /// 任務目標物件得到或死亡後處理
+        /// </summary>
+        public void UpdateMissionCount()
+        {
+            countCurrent++;
+
+            if (countCurrent == dataDialogue.countNeed) dataDialogue.stateNPCMission = StateNPCMission.AferMission;
         }
     }
 }

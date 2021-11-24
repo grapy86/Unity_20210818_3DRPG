@@ -6,6 +6,7 @@ using UnityEngine.Events;
 namespace coffee
 {
     /// <summary>
+    /// 2021.1124
     /// 受傷系統
     /// 處理血量、受傷與死亡
     /// </summary>

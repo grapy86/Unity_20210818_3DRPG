@@ -1,3 +1,4 @@
+using coffee.Dialogue;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
@@ -5,6 +6,7 @@ using UnityEngine.AI;
 namespace coffee
 {
     /// <summary>
+    /// 2121.1124
     /// 敵人行為
     /// </summary>
     public class Enemy : MonoBehaviour
@@ -33,6 +35,9 @@ namespace coffee
 
         [Header("面向玩家速度"), Range(0, 50)]
         public float speedLookAt = 5;
+
+        [Header("NPC 名稱")]
+        public string nameNPC = "NPCBoy";
         #endregion
 
         #region Field Private
@@ -47,6 +52,8 @@ namespace coffee
         private NavMeshAgent nma;
         private string parameterIdleWalk = "WalkingSwitch";
         private string parameterAttack = "AttackTrigger";
+        private NPC npc;
+        private HurtSystem hurtSystem;
         /// <summary>
         /// 隨機行走座標
         /// </summary>
@@ -59,7 +66,6 @@ namespace coffee
         /// 玩家是否在雷達範圍內
         /// </summary>
         private bool playerInTrackRange { get => Physics.OverlapSphere(transform.position, rangeTrack, 1 << 6).Length > 0; }
-
         #endregion
 
         private void OnDrawGizmos()
@@ -98,8 +104,14 @@ namespace coffee
             ani = GetComponent<Animator>();
             nma = GetComponent<NavMeshAgent>();
             nma.speed = speed;
+            hurtSystem = GetComponent<HurtSystem>();
 
             traPlayer = GameObject.Find(namePlayer).transform;
+            npc = GameObject.Find(nameNPC).GetComponent<NPC>();
+
+            // 受傷系統 - 死亡事件觸發時，呼叫 NPC 更新數量
+            // AddListener(Method) 添加監聽器(執行方法)
+            hurtSystem.onDead.AddListener(npc.UpdateMissionCount);
 
             nma.SetDestination(transform.position);
         }
@@ -110,7 +122,7 @@ namespace coffee
         }
         #endregion
 
-        #region Method
+        #region Method Private
         /// <summary>
         /// 狀態管理
         /// </summary>

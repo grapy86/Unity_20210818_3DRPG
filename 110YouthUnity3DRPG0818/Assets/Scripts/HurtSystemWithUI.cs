@@ -5,6 +5,7 @@ using UnityEngine.UI;
 namespace coffee
 {
     /// <summary>
+    /// 2021.1124
     /// 包含介面的受傷系統
     /// 可以處理血條更新
     /// </summary>
