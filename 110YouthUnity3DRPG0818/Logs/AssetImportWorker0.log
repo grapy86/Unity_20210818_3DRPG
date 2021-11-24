@@ -1649,3 +1649,4 @@ Received Import Request.
 Start importing Assets/CharacterAnimation/Male_01_V01@Great Sword Slash.fbx using Guid(ec7cb55ce44b27147b5e725b532c3389) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1876a70d0b5fb3570482c0a027d72f8b') in 0.004847 seconds 
   Import took 0.007581 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
