@@ -45,13 +45,18 @@ namespace coffee
         /// </summary>
         /// <param name="damage">接受到的傷害</param>
         // 欲使成員被子類別複寫須加上 virtual
-        public virtual void Hurt(float damage)
+        public virtual bool Hurt(float damage)
         {
-            if (ani.GetBool(parameterDead)) return;
+            if (ani.GetBool(parameterDead)) return true;
             hp -= damage;
             ani.SetTrigger(parameterHurt);
             onHurt.Invoke();
-            if (hp <= 0) Dead();
+            if (hp <= 0)
+            {
+                Dead();
+                return true;
+            }
+            else return false;
         }
         #endregion
 

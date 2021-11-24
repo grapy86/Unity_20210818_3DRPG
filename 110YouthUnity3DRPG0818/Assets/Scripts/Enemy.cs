@@ -42,6 +42,7 @@ namespace coffee
         private bool isWalk;
         private bool isTrack;
         private bool isAttack;
+        private bool targetIsDead;
         private Animator ani;
         private NavMeshAgent nma;
         private string parameterIdleWalk = "WalkingSwitch";
@@ -143,7 +144,7 @@ namespace coffee
         /// </summary>
         private void Idle()
         {
-            if (playerInTrackRange) state = StateEnemy.Track;
+            if (!targetIsDead && playerInTrackRange) state = StateEnemy.Track;
 
             if (isIdle) return;
             isIdle = true;
@@ -168,7 +169,7 @@ namespace coffee
         private void Walk()
         {
             #region 持續執行區域
-            if (playerInTrackRange) state = StateEnemy.Track;
+            if (!targetIsDead && playerInTrackRange) state = StateEnemy.Track;
 
             nma.SetDestination(v3RandomWalkFinal);
             ani.SetBool(parameterIdleWalk, nma.remainingDistance > 0.1f);
@@ -247,12 +248,23 @@ namespace coffee
                             transform.forward * v3AttackOffset.z,
                             v3AttackSize / 2, Quaternion.identity, 1 << 6);
 
-            if (hits.Length > 0) hits[0].GetComponent<HurtSystem>().Hurt(attack);
+            if (hits.Length > 0) targetIsDead = hits[0].GetComponent<HurtSystem>().Hurt(attack);
+            if (targetIsDead) TargetDead();
 
             float waitToNextAttack = timeAttack - delaySendDamage;
             yield return new WaitForSeconds(waitToNextAttack);
+            isAttack = false;
+        }
 
-            isAttack = true;
+        /// <summary>
+        /// 目標死亡
+        /// </summary>
+        private void TargetDead()
+        {
+            state = StateEnemy.Walk;
+            isIdle = false;
+            isWalk = false;
+            nma.isStopped = false;
         }
 
         /// <summary>

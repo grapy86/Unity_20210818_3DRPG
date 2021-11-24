@@ -19,7 +19,7 @@ namespace coffee
         private float hpEffectOriginal;
 
         // 欲複寫父類別成員須使用 override
-        public override void Hurt(float damage)
+        public override bool Hurt(float damage)
         {
             hpEffectOriginal = hp;
 
@@ -27,6 +27,8 @@ namespace coffee
             // 此行代表該父類別的所有內容，若刪除此行則不會執行
             base.Hurt(damage);
             StartCoroutine(HpBarEffect());
+
+            return hp <= 0;
         }
 
         /// <summary>
