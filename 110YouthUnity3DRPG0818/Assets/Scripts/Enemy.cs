@@ -17,8 +17,10 @@ namespace coffee
         [Header("範圍：追蹤與攻擊")]
         public float rangeAttack = 5;
         public float rangeTrack = 15;
-        [Header("攻擊時間"), Range(0, 5)]
+        [Header("攻擊冷卻時間"), Range(0, 5)]
         public float timeAttack = 2.5f;
+        [Header("攻擊延遲傳送傷害時間"), Range(0, 5)]
+        public float delaySendDamage = 0.5f;
 
         [Header("等待隨機秒數")]
         public Vector2 v2RandomWait = new Vector2(1f, 5f);
@@ -28,6 +30,9 @@ namespace coffee
         [Header("攻擊區域位移與尺寸")]
         public Vector3 v3AttackOffset;
         public Vector3 v3AttackSize = Vector3.one;
+
+        [Header("面向玩家速度"), Range(0, 50)]
+        public float speedLookAt = 5;
         #endregion
 
         #region Field Private
@@ -91,6 +96,7 @@ namespace coffee
         {
             ani = GetComponent<Animator>();
             nma = GetComponent<NavMeshAgent>();
+            nma.speed = speed;
 
             traPlayer = GameObject.Find(namePlayer).transform;
 
@@ -215,23 +221,49 @@ namespace coffee
             nma.isStopped = true;
             ani.SetBool(parameterIdleWalk, false);
             nma.SetDestination(traPlayer.position);
+            LookAtPlayer();
 
             if (nma.remainingDistance > rangeAttack) state = StateEnemy.Track;
 
             if (isAttack) return;
+            isAttack = true;
 
             ani.SetTrigger(parameterAttack);
+            StartCoroutine(DelaySendDamageToTarget());
+        }
+
+        /// <summary>
+        /// 延遲傳送傷害到目標
+        /// 配合物件動畫以符合視覺效果
+        /// </summary>
+        /// <returns></returns>
+        private IEnumerator DelaySendDamageToTarget()
+        {
+            yield return new WaitForSeconds(delaySendDamage);
 
             Collider[] hits = Physics.OverlapBox(
-                transform.position + transform.right * v3AttackOffset.x +
-                transform.up * v3AttackOffset.y +
-                transform.forward * v3AttackOffset.z,
-                v3AttackSize / 2, Quaternion.identity, 1 << 6);
+                            transform.position + transform.right * v3AttackOffset.x +
+                            transform.up * v3AttackOffset.y +
+                            transform.forward * v3AttackOffset.z,
+                            v3AttackSize / 2, Quaternion.identity, 1 << 6);
 
-            if (hits.Length > 0) print("攻擊到的物件：" + hits[0].name);
+            if (hits.Length > 0) hits[0].GetComponent<HurtSystem>().Hurt(attack);
+
+            float waitToNextAttack = timeAttack - delaySendDamage;
+            yield return new WaitForSeconds(waitToNextAttack);
 
             isAttack = true;
         }
-        #endregion
+
+        /// <summary>
+        /// 使怪物面朝向玩家
+        /// </summary>
+        private void LookAtPlayer()
+        {
+            Quaternion angle = Quaternion.LookRotation(traPlayer.position - transform.position);
+            transform.rotation = Quaternion.Lerp(transform.rotation, angle, Time.deltaTime * speedLookAt);
+            ani.SetBool(parameterIdleWalk, transform.rotation != angle);
+        }
     }
+    #endregion
 }
