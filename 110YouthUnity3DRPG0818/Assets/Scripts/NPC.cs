@@ -32,11 +32,21 @@ namespace coffee.Dialogue
             Gizmos.DrawSphere(transform.position, checkPlayerRadius);
         }
 
+        private void Awake()
+        {
+            Initialize();
+        }
+
         private void Update()
         {
             goTip.SetActive(CheckPlayer());
             LookAtPlayer();
             StartDialogue();
+        }
+
+        private void Initialize()
+        {
+            
         }
 
         /// <summary>
@@ -70,6 +80,9 @@ namespace coffee.Dialogue
             if (CheckPlayer() && startDialogueKey)
             {
                 dialogueSystem.Dialogue(dataDialogue);
+
+                if (dataDialogue.stateNPCMission == StateNPCMission.BeforeMission)
+                    dataDialogue.stateNPCMission = StateNPCMission.Missionning;
             }
             else if (!CheckPlayer()) dialogueSystem.StopDialogue();
         }

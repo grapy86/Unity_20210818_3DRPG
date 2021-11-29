@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace coffee
 {
@@ -21,10 +22,13 @@ namespace coffee
         [Header("攻擊區域尺寸與位移")]
         public Vector3 v3AttackOffset;
         public Vector3 v3AttackSize = Vector3.one;
-
-        [Header("攻擊動畫參數")]
+        [Header("攻擊與走路動畫參數")]
         public string parameterAttack = "AttackLayerTrigger";
-
+        public string parameterWalk = "WalkingSwitch";
+        [Header("攻擊事件")]
+        public UnityEvent onAttcck;
+        [Header("攻擊圖層遮色片")]
+        public AvatarMask maskAttack;
         #endregion
 
         #region Field Private
@@ -65,8 +69,17 @@ namespace coffee
         #region Method Private
         private void Attack()
         {
+            bool isWalk = ani.GetBool(parameterWalk);
+
+            maskAttack.SetHumanoidBodyPartActive(AvatarMaskBodyPart.LeftLeg, !isWalk);
+            maskAttack.SetHumanoidBodyPartActive(AvatarMaskBodyPart.RightLeg, !isWalk);
+            maskAttack.SetHumanoidBodyPartActive(AvatarMaskBodyPart.LeftFootIK, !isWalk);
+            maskAttack.SetHumanoidBodyPartActive(AvatarMaskBodyPart.RightFootIK, !isWalk);
+            maskAttack.SetHumanoidBodyPartActive(AvatarMaskBodyPart.Root, !isWalk);
+
             if (keyAttack && !isAttack)
             {
+                onAttcck.Invoke();
                 isAttack = true;
                 ani.SetTrigger(parameterAttack);
                 StartCoroutine(DelayHit());
@@ -93,4 +106,3 @@ namespace coffee
         #endregion
     }
 }
-

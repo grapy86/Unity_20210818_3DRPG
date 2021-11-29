@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace coffee.Dialogue
@@ -20,6 +21,8 @@ namespace coffee.Dialogue
         public float dialogueInterval = 0.3f;
         [Header("對話按鍵")]
         public KeyCode dialogueKey = KeyCode.Space;
+        [Header("打字事件")]
+        public UnityEvent onType;
 
         /// <summary>
         /// 開始對話
@@ -65,11 +68,25 @@ namespace coffee.Dialogue
             textName.text = "";
             textName.text = data.nameDialogue;
 
-            string[] dialogueContents = data.beforeMission;
+            string[] dialogueContents = { };
+
+            switch (data.stateNPCMission)
+            {
+                case StateNPCMission.BeforeMission:
+                    dialogueContents = data.beforeMission;
+                    break;
+                case StateNPCMission.Missionning:
+                    dialogueContents = data.missionning;
+                    break;
+                case StateNPCMission.AferMission:
+                    dialogueContents = data.afterMission;
+                    break;
+            }
 
             for (int j = 0; j < dialogueContents.Length; j++)
             {
                 textContent.text = "";
+                goTriangle.SetActive(false);
 
                 for (int i = 0; i < dialogueContents[j].Length; i++)
                 {
@@ -85,4 +102,3 @@ namespace coffee.Dialogue
         }
     }
 }
-
