@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace coffee.Dialogue
 {
@@ -20,6 +21,8 @@ namespace coffee.Dialogue
         public float speedLookAt = 3;
         [Header("對話系統")]
         public DialogueSystem dialogueSystem;
+        [Header("完成任務事件")]
+        public UnityEvent onFinish;
 
         private Transform target;
         private bool startDialogueKey { get => Input.GetKeyDown(KeyCode.E); }
@@ -46,7 +49,7 @@ namespace coffee.Dialogue
 
         private void Initialize()
         {
-            
+            dataDialogue.stateNPCMission = StateNPCMission.BeforeMission;
         }
 
         /// <summary>
@@ -95,7 +98,11 @@ namespace coffee.Dialogue
         {
             countCurrent++;
 
-            if (countCurrent == dataDialogue.countNeed) dataDialogue.stateNPCMission = StateNPCMission.AferMission;
+            if (countCurrent == dataDialogue.countNeed)
+            {
+                dataDialogue.stateNPCMission = StateNPCMission.AferMission;
+                onFinish.Invoke();
+            }
         }
     }
 }
